@@ -1,0 +1,181 @@
+@import './shared.scss';
+
+.projects-section {
+    @media screen and (max-width: $small) {
+        margin-top: 4rem;
+    }
+    margin-top: 8rem;
+}
+
+.projects-text {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.projects-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.projects-scroll-ref {
+    position: absolute;
+    top: 40%;
+}
+
+.projects-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-img {
+    width: 30rem;
+    height: auto;
+}
+
+@media screen and (max-width: $small) {
+    .projects-img {
+        width: 22rem;
+    }
+}
+
+@media screen and (min-width: $small) and (max-width: $large) {
+    .projects-img {
+        width: 24rem;
+    }
+}
+
+.projects-img.left {
+    place-self: end;
+}
+
+.projects-img.right {
+    place-self: start;
+}
+
+@media screen and (max-width: $medium) {
+    div.projects-wrapper {
+        display: block;
+    }
+
+    .projects-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .project-name{
+        margin-top: 1rem;
+    }
+    
+    .projects-img.small {
+        margin-top: 3rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+    .projects-img {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: $medium) {
+    .projects-img.small {
+        display: none;
+    } 
+}
+
+.button-wrapper {
+    display: flex;
+    height: 4rem;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    @media screen and (max-width: $small) {
+        margin-top: 1rem;
+    }
+    justify-content: space-evenly;
+}
+
+.button {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    height: 3.8rem;
+    width: 3.8rem;
+    border-radius: 5rem;
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include unselectable();
+}
+
+.button-icon {
+    color: $primary;
+    font-size: 3.5rem;
+}
+
+[class^="devicon-"], [class*=" devicon-"] {
+    width: 100%;
+    height: auto;
+    vertical-align: center;
+}
+
+a.button:hover{
+    transform: scale(105%);
+}
+
+@media screen and (max-width: 1100px) {
+    ul.dev-wrapper {
+        $x-margin: auto;
+        margin-top: 1.8rem;
+        margin-left: $x-margin;
+        margin-right: $x-margin;
+    }
+}
+
+.dev-wrapper {
+    @media screen and (max-width: $small) {
+        padding: .8rem;
+        margin-top: 1rem;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.8rem;
+    padding: 2rem;
+
+    display: grid;
+    $width: 4.8rem;
+    $height: 4.5rem;
+    grid-template-rows: $height $height;
+    grid-template-columns: $width $width $width;
+    row-gap: 1rem;
+    gap: .3rem;
+
+    background-color: $secondary;
+    border-radius: 1.8rem;
+}
+
+.dev-item {
+    color: $primary;
+    text-align: center;
+    list-style-type: none;
+}
+
+li.dev-item h3 {
+    color: $primary;
+}
+
+.dev-icon {
+    color: $primary;
+    font-size: 2.6rem;
+}

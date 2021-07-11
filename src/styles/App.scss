@@ -1,0 +1,25 @@
+@import './shared.scss';
+
+.name-section {
+    position: relative;
+    height: 20rem;
+    width: 100%;
+}
+
+.name-header {
+    margin-top: 3.5rem;
+    text-align: center;
+    font-family: 'Megrim';
+}
+
+.position-name {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.background-wrapper.background-name {
+    @media screen and (max-width: $small) {
+        top: -20rem;
+    }
+    top: -25rem;
+}

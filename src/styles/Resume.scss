@@ -1,0 +1,107 @@
+@import './shared.scss';
+
+.resume-header {
+    margin-bottom: 3rem;
+}
+
+.resume-section {
+    position: relative;
+    margin-top: 27rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: $small) {
+    .resume-section {
+        margin-top: 12rem;
+    }
+}
+
+@media screen and (min-width: $small) and (max-width: $large) {
+    .resume-section {
+        margin-top: 34rem;
+    }
+}
+
+.resume-scroll-ref {
+    position: absolute;
+    top: -3rem;
+}
+
+.email-input-wrapper {
+    position: relative;
+    @media screen and (max-width: $small) { 
+        width: 20rem;
+    }
+    @media screen and (max-width: $medium) { 
+        width: 28rem;
+    }
+    width: 35%;
+    margin-top: .6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.email-input {
+    $y-padding: .4rem;
+    height: 1.8rem;
+    width: calc(100% - 2.6rem);
+    padding-bottom: $y-padding;
+    padding-top: $y-padding;
+    padding-left: 2.6rem;
+    background-color: $secondary;
+    border: none;
+    color: $primary;
+    border-radius: 1.6rem;
+}
+
+.email-input:focus {
+    outline: none;
+}
+
+.email-icon-wrapper {
+    position: absolute;
+    background-color: $primary;
+    top: .16rem;
+    left: .2rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 4rem;
+    padding: .35rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.email-icon {
+    text-align: center;
+}
+
+.email-sumbit-button {
+    position: absolute;
+    background: none;
+    text-align: center;
+    border-radius: 2rem;
+    top: .2rem;
+    right: .1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.email-sumbit-button:focus {
+    transform: translateX(4rem);
+    transition-property: all;
+    transition-duration: 1s;
+
+    span {
+        color: transparent;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+}
+
+.email-sumbit-icon {
+    color: $primary;
+    font-size: 2.3rem;
+}

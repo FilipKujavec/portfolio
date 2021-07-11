@@ -1,0 +1,54 @@
+@import './shared.scss';
+
+.background-item {
+  overflow-y: hidden;
+}
+
+.first-background {
+    position: absolute;
+}
+
+.second-background {
+    position: absolute;
+}
+
+.third-background {
+    position: absolute;
+}
+
+@media screen and (max-width: 480px) {
+    .first-background {
+        top: 0rem;
+    }
+    .second-background {
+        top: 85rem;
+    }
+    .third-background {
+        top: 0rem;
+    }
+}
+
+@media screen and (min-width: $small) {
+    .first-background {
+        top: -5rem;
+    }
+    .second-background {
+        top: 105rem;
+    }
+    .third-background {
+        top: 5rem;
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .first-background {
+        top: -5rem;
+    }
+    .second-background {
+        top: 80rem;
+    }
+    .third-background {
+        top: 17rem;
+    }
+}
+
