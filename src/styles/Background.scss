@@ -1,9 +1,42 @@
 @import './shared.scss';
 
-.background-item {
-  overflow-y: hidden;
+@media screen and (max-width: 1500px) {
+    div.background-wrapper { 
+        gap: 35%;
+    }
 }
 
+.background-wrapper {
+    position: absolute;
+    z-index: -999;
+    display: flex;
+    justify-content: space-between;
+    gap: 55%;
+    width: 100%;
+    height: max-content;
+    overflow-x: hidden;
+}
+
+.background.img {
+    width: 721px;
+    height: 1247px;
+    flex-shrink: 0;
+}
+
+// Shadow
+.svg-left path {
+    -webkit-filter: drop-shadow(30px -5px 12px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(30px -5px 12px rgba(0, 0, 0, 0.25));
+}
+
+.svg-right path {
+    -webkit-filter: drop-shadow(-30px -5px 12px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(-30px -5px 12px rgba(0, 0, 0, 0.25));
+    transform: translateX(55px);
+}
+
+
+// Positioning
 .first-background {
     position: absolute;
 }

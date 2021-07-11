@@ -66,39 +66,6 @@ i {
     font-size: 6rem;
 }
 
-// Background
-@media screen and (max-width: 1500px) {
-    div.background-wrapper { 
-        gap: 35%;
-    }
-}
-
-.background-wrapper {
-    position: absolute;
-    z-index: -999;
-    display: flex;
-    justify-content: space-between;
-    gap: 55%;
-    width: 100%;
-    height: max-content;
-    overflow-x: hidden;
-}
-
-.background.img {
-    width: 721px;
-    height: 1247px;
-    flex-shrink: 0;
-}
-
-.background.img.left {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/recipes-18a94.appspot.com/o/PolygonLeft.png?alt=media&token=4a0663b2-94dd-455c-9ea8-b691b9b5a9cf');
-}
-
-.background.img.right {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/recipes-18a94.appspot.com/o/PolygonRight.png?alt=media&token=5b9b6e9a-c14a-49b4-988e-1edb19aafe98');
-}
-
-
 // Center classes
 .center {
     text-align: center;
@@ -107,12 +74,4 @@ i {
 .flex-center {
     display: flex;
     justify-content: center;
-}
-
-#background.background {
-    position: fixed;
-    z-index: -999;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
 }
