@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './components/App';
-import Particles from 'react-particles-js';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -17,12 +16,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <>
-//     <Particles />
-//     </>
-//   </React.StrictMode>,
-//   document.getElementById('background')
-// );
