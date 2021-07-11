@@ -24,8 +24,8 @@ export default function Projects({ forwardRef }) {
             <div className='projects-wrapper' >
 
                 <div className='projects-item left' >
-                    <img src={VideoCallImage} alt='image mockup of videocall website' className='projects-img left' data-aos={fadeRight} />
-                    <img src={RecipeImageSmallScreens} alt='image mockup of videocall website' className='projects-img small' data-aos={fadeRight} />
+                    <img src={VideoCallImage} alt='mockup of videocall website' className='projects-img left' data-aos={fadeRight} />
+                    <img src={RecipeImageSmallScreens} alt='mockup of videocall website' className='projects-img small' data-aos={fadeRight} />
 
                     <h3 className='project-name text-small center' data-aos={fadeRight} >VideoCall</h3>
 
@@ -44,8 +44,8 @@ export default function Projects({ forwardRef }) {
                 </div>
 
                 <div className='projects-item' >
-                    <img src={RecipeImage} alt='image mockup of recipes website' className='projects-img right' data-aos={fadeLeft} />
-                    <img src={RecipeImageSmallScreens} alt='image mockup of recipes website' className='projects-img small' data-aos={fadeLeft} />
+                    <img src={RecipeImage} alt='mockup of recipes website' className='projects-img right' data-aos={fadeLeft} />
+                    <img src={RecipeImageSmallScreens} alt='mockup of recipes website' className='projects-img small' data-aos={fadeLeft} />
 
 
 
