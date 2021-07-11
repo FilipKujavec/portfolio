@@ -30,6 +30,7 @@
 }
 
 .projects-img {
+    @include unselectable();
     width: 30rem;
     height: auto;
 }
