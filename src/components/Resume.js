@@ -4,13 +4,15 @@ import Background from './Background';
 
 export default function Resume({ forwardRef }) {
     const [emailState, setEmailState] = useState('')
-    const submitButtonRef = useRef(null)
+    const [emailButtonClass, setEmailButtonClass] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault();
+        
+        setEmailButtonClass('button-pressed')
 
         setTimeout(() => {
-            submitButtonRef.current.blur();
+            setEmailButtonClass('')
         }, 1500);
         
     } 
@@ -37,7 +39,7 @@ export default function Resume({ forwardRef }) {
                     </i>
                     </div>
 
-                    <button ref={submitButtonRef} className='email-sumbit-button' >
+                    <button className={`email-sumbit-button ${emailButtonClass}`} >
                         <i className='email-sumbit-icon material-icons-outlined' >
                             east
                         </i>
