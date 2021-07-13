@@ -3,7 +3,7 @@ import '../styles/Resume.scss'
 import Background from './Background';
 
 import { db } from '../config/fbConfig'
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 
 export default function Resume({ forwardRef }) {
     const [emailInputState, setEmailInputState] = useState('');
