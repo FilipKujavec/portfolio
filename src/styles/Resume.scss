@@ -60,6 +60,12 @@
     outline: none;
 }
 
+.email-input-error {
+    text-align: center;
+    margin-top: .5rem;
+    color: rgb(241, 40, 40);
+}
+
 .email-icon-wrapper {
     position: absolute;
     background-color: $primary;
@@ -78,7 +84,7 @@
     text-align: center;
 }
 
-.email-sumbit-button {
+.email-submit-button {
     position: absolute;
     background: none;
     text-align: center;
@@ -101,7 +107,7 @@
     }
 }
 
-.email-sumbit-icon {
+.email-submit-icon {
     color: $primary;
     font-size: 2.3rem;
 }

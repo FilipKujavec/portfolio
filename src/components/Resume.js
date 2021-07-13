@@ -1,21 +1,53 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Resume.scss'
 import Background from './Background';
 
-export default function Resume({ forwardRef }) {
-    const [emailState, setEmailState] = useState('')
-    const [emailButtonClass, setEmailButtonClass] = useState('')
+import { db } from '../config/fbConfig'
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 
-    const onSubmit = (e) => {
+export default function Resume({ forwardRef }) {
+    const [emailInputState, setEmailInputState] = useState('');
+    const [emailButtonClass, setEmailButtonClass] = useState('');
+    const [emailInputError, setEmailInputError] = useState('');
+    const [formHasBeenSubmitted, setFormHasBeenSubmitted] = useState({ isTrue: false, email: ''});
+
+    const onSubmit = async (e) => {
         e.preventDefault();
-        
+        setEmailInputError('');
+
+        //Ensure that email is valid
+        if(!/(.+)@(.+){2,}\.(.+){2,}/.test(emailInputState)) {
+            setEmailInputError('Invalid Email');
+            return;
+        }
+
+        if (formHasBeenSubmitted.isTrue === true && formHasBeenSubmitted.email === emailInputState) {
+            setEmailInputError('The resume was already sent to this email address, please be patient.');
+            return;
+        }
+
         setEmailButtonClass('button-pressed')
 
         setTimeout(() => {
-            setEmailButtonClass('')
+            setEmailButtonClass('');
         }, 1500);
-        
-    } 
+
+        try {
+            const docRef = await setDoc(doc(db, 'emails', emailInputState), { email: emailInputState })
+        } catch (err) {
+            console.error(err);
+            setEmailInputError('Failed, the email has most likely already received a resume');
+            return;
+        }
+
+        setFormHasBeenSubmitted({ isTrue: true, email: emailInputState });
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            setEmailInputError(false);
+        }, 300);
+    }, [emailInputState])
 
     return (
         <section className='resume-section' >
@@ -31,16 +63,17 @@ export default function Resume({ forwardRef }) {
             <div className='flex-center' data-aos='fade-right' >
                 <form className='email-input-wrapper' onSubmit={(e) => onSubmit(e)}>
 
-                    <input className='email-input text-small' onChange={(e) => setEmailState(e.target.value)} value={emailState} />
+                    <input className='email-input text-small' onChange={(e) => setEmailInputState( e.target.value.trim() )} value={emailInputState} />
+                    <p className='email-input-error' > {emailInputError} </p>
 
                     <div className='email-icon-wrapper' >
-                    <i className='email-icon material-icons-outlined' >
-                        email
-                    </i>
+                        <i className='email-icon material-icons-outlined' >
+                            email
+                        </i>
                     </div>
 
-                    <button className={`email-sumbit-button ${emailButtonClass}`} >
-                        <i className='email-sumbit-icon material-icons-outlined' >
+                    <button className={`email-submit-button ${emailButtonClass}`} >
+                        <i className='email-submit-icon material-icons-outlined' >
                             east
                         </i>
                     </button>
