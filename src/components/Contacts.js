@@ -17,7 +17,7 @@ export default function Contacts({ forwardRef }) {
                     </li>
 
                     <li className='contacts-item contacts-item' >
-                        <a className='contacts-link' href='https://github.kujavec.com' target='_blank' rel='noreferrer' >
+                        <a className='contacts-link' href='http://github.kujavec.com' target='_blank' rel='noreferrer' >
                             <i className='contacts-icon devicon-github-original' ></i> 
                             <h3 className='contacts-text text-small' >Filip Kujavec</h3>
                         </a>
