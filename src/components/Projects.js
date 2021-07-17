@@ -25,7 +25,7 @@ export default function Projects({ forwardRef }) {
 
                 <div className='projects-item left' >
                     <img src={VideoCallImage} alt='mockup of videocall website' className='projects-img left' data-aos={fadeRight} />
-                    <img src={RecipeImageSmallScreens} alt='mockup of videocall website' className='projects-img small' data-aos={fadeRight} />
+                    <img src={VideoCallImageSmallScreens} alt='mockup of videocall website' className='projects-img small' data-aos={fadeRight} />
 
                     <h3 className='project-name text-small center' data-aos={fadeRight} >VideoCall</h3>
 
