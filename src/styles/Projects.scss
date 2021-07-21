@@ -31,6 +31,7 @@
 
 .projects-img {
     @include unselectable();
+    pointer-events: none;
     width: 30rem;
     height: auto;
 }
