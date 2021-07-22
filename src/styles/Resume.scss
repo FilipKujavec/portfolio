@@ -1,126 +1,125 @@
 @import './shared.scss';
 
 .resume-header {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .resume-section {
-    position: relative;
-    margin-top: 27rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
+  position: relative;
+  margin-top: 27rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 @media screen and (max-width: $small) {
-    .resume-section {
-        margin-top: 12rem;
-    }
+  .resume-section {
+    margin-top: 12rem;
+  }
 }
 
 @media screen and (min-width: $small) and (max-width: $large) {
-    .resume-section {
-        margin-top: 34rem;
-    }
+  .resume-section {
+    margin-top: 34rem;
+  }
 }
 
 .resume-scroll-ref {
-    position: absolute;
-    top: -3rem;
+  position: absolute;
+  top: -3rem;
 }
 
 .email-input-wrapper {
-    position: relative;
-    @media screen and (max-width: $small) { 
-        width: 20rem;
-    }
-    @media screen and (max-width: $medium) { 
-        width: 28rem;
-    }
-    width: 35%;
-    margin-top: .6rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  position: relative;
+  @media screen and (max-width: $small) {
+    width: 20rem;
+  }
+  @media screen and (max-width: $medium) {
+    width: 28rem;
+  }
+  width: 35%;
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .email-input {
-    $y-padding: .4rem;
-    height: 1.8rem;
-    width: calc(100% - 2.6rem);
-    padding-bottom: $y-padding;
-    padding-top: $y-padding;
-    padding-left: 2.6rem;
-    background-color: $secondary;
-    border: none;
-    color: $primary;
-    border-radius: 1.6rem;
+  $y-padding: 0.4rem;
+  height: 1.8rem;
+  width: calc(100% - 2.6rem);
+  padding-bottom: $y-padding;
+  padding-top: $y-padding;
+  padding-left: 2.6rem;
+  background-color: $secondary;
+  border: none;
+  color: $primary;
+  border-radius: 1.6rem;
 }
 
 .email-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .email-input-error {
-    text-align: center;
-    margin-top: .5rem;
-    color: rgb(241, 40, 40);
+  text-align: center;
+  margin-top: 0.5rem;
+  color: rgb(241, 40, 40);
 }
 
 .email-icon-wrapper {
-    position: absolute;
-    background-color: $primary;
-    top: .16rem;
-    left: .2rem;
-    height: 1.6rem;
-    width: 1.6rem;
-    border-radius: 4rem;
-    padding: .35rem;
-    display: flex;
-    justify-content: center;
-
+  position: absolute;
+  background-color: $primary;
+  top: 0.16rem;
+  left: 0.2rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 4rem;
+  padding: 0.35rem;
+  display: flex;
+  justify-content: center;
 }
 
 .email-icon {
-    text-align: center;
+  text-align: center;
 }
 
 .resume-download-button {
-    display: block;
-    position: relative;
-    background-color: $secondary;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    width: 16rem;
-    height: 3rem;
+  display: block;
+  position: relative;
+  background-color: $secondary;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 16rem;
+  height: 3rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .resume-download-button:hover {
-    box-shadow: 5px 5px 5px rgba($secondary, .1);
-    transform: translateY(.1rem);  
+  box-shadow: 5px 5px 5px rgba($secondary, 0.1);
+  transform: translateY(0.1rem);
 }
 
 .button-pressed {
-    transform: translateX(-4rem);
+  transform: translateX(-4rem);
+  transition-property: all;
+  transition-duration: 1s;
+
+  span {
+    color: transparent;
     transition-property: all;
     transition-duration: 1s;
-
-    span {
-        color: transparent;
-        transition-property: all;
-        transition-duration: 1s;
-    }
+  }
 }
 
 .resume-download-icon {
-    color: $primary;
-    font-size: 2.3rem;
+  color: $primary;
+  font-size: 2.3rem;
 }

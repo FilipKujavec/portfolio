@@ -32,8 +32,8 @@ function App() {
 
       <Contacts forwardRef={contactsRef} />
 
-      <footer className='footer'>
-        <div className='flex center'>
+      <footer className="footer">
+        <div className="flex center">
           <p>© 2021 Filip Kujavec</p>
         </div>
       </footer>
