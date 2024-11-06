@@ -6,7 +6,7 @@
 
 .resume-section {
   position: relative;
-  margin-top: 27rem;
+  margin-top: 23rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -100,6 +100,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  color: $primary;
 }
 
 .resume-download-button:hover {

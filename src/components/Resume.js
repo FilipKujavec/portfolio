@@ -16,9 +16,17 @@ export default function Resume({ forwardRef }) {
 
         <a
           className="resume-download-button"
-          href="https://firebasestorage.googleapis.com/v0/b/portfolio-79deb.appspot.com/o/Filip_Kujavec.pdf?alt=media&token=9fca3cc5-e3a2-411f-a0f0-5daad09e5baa"
+          href="filip.kujavec.com/resume-en"
         >
           <i className="resume-download-icon material-icons-outlined">file_download</i>
+          English
+        </a>
+        <a
+          className="resume-download-button"
+          href="filip.kujavec.com/resume-de"
+        >
+          <i className="resume-download-icon material-icons-outlined">file_download</i>
+          Deutsch
         </a>
       </div>
       <Background class="third-background" />

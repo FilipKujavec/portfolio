@@ -16,6 +16,8 @@ function App() {
     ref.current.scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
+  const currentYear = new Date().getFullYear() 
+
   return (
     <>
       <Header
@@ -26,7 +28,7 @@ function App() {
 
       <Name />
 
-      <Projects forwardRef={projectsRef} />
+      {/* <Projects forwardRef={projectsRef} /> */}
 
       <Resume forwardRef={resumeRef} />
 
@@ -34,7 +36,7 @@ function App() {
 
       <footer className="footer">
         <div className="flex center">
-          <p>© 2021 Filip Kujavec</p>
+          <p>© {currentYear} Filip Kujavec</p>
         </div>
       </footer>
     </>
